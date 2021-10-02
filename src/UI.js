@@ -10,5 +10,12 @@ export const displayForm = () => {
 };
 
 export const displayProjects = (projects) => {
-    console.log(projects);
+    projectDiv.innerHTML = '';
+
+    projects.forEach(project => {
+        console.log(project);
+        const header = document.createElement('h2');
+        header.textContent = project.title;
+        projectDiv.appendChild(header);
+    });
 };
