@@ -1,13 +1,13 @@
 const projectForm = document.querySelector('#form-container');
 const projectDiv = document.querySelector('#project-container');
 
-export const displayForm = () => {
-    if(projectForm.style.display !== 'none') {
-        projectForm.style.display = 'none';
-    } else {
-        projectForm.style.display = 'block';
-    }
+export const openForm = () => {
+    projectForm.style.display = 'block';
 };
+
+export const closeForm = () => {
+    projectForm.style.display = 'none';
+}
 
 export const displayProjects = (projects) => {
     projectDiv.innerHTML = '';
