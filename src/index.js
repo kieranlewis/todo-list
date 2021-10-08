@@ -24,4 +24,5 @@ submitButton.addEventListener('click', (e) => {
     let projectName = document.querySelector('#projectName').value;
     createProject(projectName);
     UI.displayProjects(projects);
+    UI.closeForm();
 });
