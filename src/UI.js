@@ -43,6 +43,11 @@ export const displayProject = (e) => {
     projectDiv.appendChild(taskHeader);
 
     displayTasks(project.tasks);
+
+    const addTasksButton = document.createElement('button');
+    addTasksButton.textContent = 'Add Task';
+    addTasksButton.addEventListener('click', project.addTask); // this will need to create a new form
+    projectDiv.appendChild(addTasksButton);
 }
 
 const displayTasks = (tasks) => {
