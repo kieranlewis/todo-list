@@ -3,7 +3,6 @@ import * as Index from './index';
 const projectForm = document.querySelector('#form-container');
 const projectDiv = document.querySelector('#project-container');
 const projectListDiv = document.querySelector('.project-list');
-const projectNameInput = document.querySelector('#projectName');
 
 export const openForm = () => {
     projectForm.style.display = 'block';
@@ -33,4 +32,21 @@ export const displayProject = (e) => {
     let index = e.target.getAttribute('data-index');
     let project = Index.getProjects()[index];
     console.log(project);
+    projectDiv.innerHTML = '';
+
+    const projectHeader = document.createElement('h2');
+    projectHeader.textContent = project.title;
+    projectDiv.appendChild(projectHeader);
+
+    const taskHeader = document.createElement('h3');
+    taskHeader.textContent = 'Tasks';
+    projectDiv.appendChild(taskHeader);
+
+    let taskList = document.createElement('ul');
+    if(project.tasks.length === 0) {
+        taskList.textContent = 'No tasks';
+    } else {
+        // create list of tasks and append to ul
+    }
+    projectDiv.appendChild(taskList);
 }
