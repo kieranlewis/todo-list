@@ -3,12 +3,14 @@ import * as Index from './index';
 const projectForm = document.querySelector('#form-container');
 const projectDiv = document.querySelector('#project-container');
 const projectListDiv = document.querySelector('.project-list');
+const projectNameInput = document.querySelector('#projectName');
 
 export const openForm = () => {
     projectForm.style.display = 'block';
 };
 
 export const closeForm = () => {
+    document.querySelector('.project-form').reset();
     projectForm.style.display = 'none';
 }
 
@@ -29,5 +31,6 @@ export const displayProjectList = (projects) => {
 
 export const displayProject = (e) => {
     let index = e.target.getAttribute('data-index');
-    console.log(Index.getProjects()[index]);
+    let project = Index.getProjects()[index];
+    console.log(project);
 }
