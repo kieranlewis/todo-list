@@ -42,8 +42,12 @@ export const displayProject = (e) => {
     taskHeader.textContent = 'Tasks';
     projectDiv.appendChild(taskHeader);
 
+    displayTasks(project.tasks);
+}
+
+const displayTasks = (tasks) => {
     let taskList = document.createElement('ul');
-    if(project.tasks.length === 0) {
+    if(tasks.length === 0) {
         taskList.textContent = 'No tasks';
     } else {
         // create list of tasks and append to ul
