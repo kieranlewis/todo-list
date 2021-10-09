@@ -23,6 +23,6 @@ submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     let projectName = document.querySelector('#projectName').value;
     createProject(projectName);
-    UI.displayProjects(projects[projects.length-1]);
+    UI.displayProjectList(projects);
     UI.closeForm();
 });
