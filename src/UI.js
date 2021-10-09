@@ -28,5 +28,6 @@ export const displayProjectList = (projects) => {
 }
 
 export const displayProject = (e) => {
-    console.log(e.target.textContent);
+    let index = e.target.getAttribute('data-index');
+    console.log(Index.getProjects()[index]);
 }

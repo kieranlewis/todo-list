@@ -14,6 +14,10 @@ function createProject(projectName) {
     projects.push(newProject);
 }
 
+export const getProjects = () => {
+    return projects;
+} 
+
 // Event Listeners
 addProjectButton.addEventListener('click', UI.openForm);
 
